@@ -1,10 +1,12 @@
 <?php
-$compra=500;
+$compra=50;
 $descuento=0;
 $total=0;
 if($compra<100 && $compra>=1)
     {
-        echo "Gracias por su compra";
+        echo "Compra:S/".$compra."\n";
+        echo "Descuento:S/".$descuento."\n";
+        echo "Total:S/".$total."\n";
     }
 elseif($compra>=100 && $compra<300)
     {   
