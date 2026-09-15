@@ -4,6 +4,7 @@ $descuento=0;
 $total=0;
 if($compra<100 && $compra>=1)
     {
+        $total=$compra;
         echo "Compra:S/".$compra."\n";
         echo "Descuento:S/".$descuento."\n";
         echo "Total:S/".$total."\n";
