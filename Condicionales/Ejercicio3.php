@@ -2,7 +2,7 @@
 $compra=50;
 $descuento=0;
 $total=0;
-if($compra<100 && $compra>=1)
+if($compra<100 && $compra>=0)
     {
         $total=$compra;
         echo "Compra:S/".$compra."\n";
