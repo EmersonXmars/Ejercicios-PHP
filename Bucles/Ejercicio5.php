@@ -9,31 +9,26 @@ while($contador<=5)
         if($contador == 1)
             {
                 $nota=8;
-                $contador++;
                 
             }
         elseif($contador == 2)
             {
                 $nota=15;
-                $contador++;
-                
+            
             }
         elseif($contador == 3)
             {
                 $nota=19;
-                $contador++;
                 
             }  
         elseif($contador == 4)
             {
-                $nota=11;
-                $contador++;
+                $nota=11;  
                 
             }    
         elseif($contador == 5)
             {
                 $nota=6;
-                $contador++;
                 
             }
 
@@ -50,6 +45,7 @@ while($contador<=5)
             {
                 $excelentes++;
             }
+            $contador++;
     }
     echo $desaprobados."\n";
     echo $aprobados. "\n";
