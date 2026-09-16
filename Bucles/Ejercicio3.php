@@ -1,6 +1,6 @@
 <?php
 $limite=8;
-$contador=0;
+$contador=1;
 $resultado=0;
 if($limite> 0)
     {

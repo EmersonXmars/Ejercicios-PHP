@@ -1,6 +1,6 @@
 <?php
 $numero=7;
-$contador=0;
+$contador=1;
 $resultado=0;
 if($numero>0)
     {
