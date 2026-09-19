@@ -1,5 +1,5 @@
 <?php
-$limite=-1;
+$limite=8;
 $resultado=0;
 if($limite>=1)
     {
