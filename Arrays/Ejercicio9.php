@@ -6,7 +6,7 @@ $productos = [
     "Monitor" => ["precio" => 700, "stock" => 2]
 ];
 
-foreach($productos as $indice =>$valor)
+/*foreach($productos as $indice =>$valor)
     {
         foreach($valor as $contenido)
             {
@@ -23,6 +23,23 @@ foreach($productos as $indice =>$valor)
                         echo "$indice - Precio:S/ ". $valor["precio"]." - Stock: ".$valor["stock"]." Disponible "."\n";
                     }
 
+            }
+    }
+*/
+
+foreach($productos as $indice =>$valor)
+    {
+        if($valor["stock"] == 0)
+            {
+                echo "$indice - Precio:S/ ". $valor["precio"]." - Stock: ".$valor["stock"]." Agotado "."\n";
+            }
+        elseif($valor["stock"]>=1 && $valor["stock"]<=3)
+            {
+                echo "$indice - Precio:S/ ". $valor["precio"]." - Stock: ".$valor["stock"]." Stock bajo "."\n";
+            }
+        elseif($valor["stock"]> 3)
+            {
+                echo "$indice - Precio:S/ ". $valor["precio"]." - Stock: ".$valor["stock"]." Disponible "."\n";
             }
     }
 ?>

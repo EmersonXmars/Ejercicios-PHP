@@ -4,7 +4,7 @@ $ventas = [
     "Luis" => [80, 90, 110],
     "Carlos" => [300, 250, 400]
 ];
-$contador=0;
+/*$contador=0;
 foreach($ventas as $indice => $valor)
     {
         foreach($valor as $value)
@@ -34,6 +34,25 @@ foreach($ventas as $indice => $valor)
 
             }
     }
-
-    /*  */
+*/
+foreach($ventas as $indice => $valor)
+    {
+        $total=0;
+        foreach($valor as $value)
+            {
+                $total =$total + $value;
+            }
+            if($total <300)
+                {
+                    echo "$indice: S/$total - Tuvo una Baja venta"."\n"; 
+                }
+            elseif($total >=300 && $total <=700)
+                {
+                    echo "$indice: S/$total - Tuvo una Media venta"."\n"; 
+                }
+            elseif($total >700)
+                {
+                    echo "$indice: S/$total - Tuvo una Alta venta"."\n";                         
+                }
+    }
 ?>
