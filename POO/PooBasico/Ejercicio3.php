@@ -25,7 +25,7 @@ class Estudiante
             {
                 $total=$total + $valor;
             }
-        $promedio=$total / ($indice+1);
+        $promedio=$total / count($this->notas);
         //echo "\n $promedio";
         return $promedio;
 

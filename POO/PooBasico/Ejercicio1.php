@@ -21,7 +21,7 @@ class Mascota
         {
             echo "Adulto";
         }
-    elseif($this->nombre >7)
+    elseif($this->edad >7)
         {
             echo "Mayor";
         }
