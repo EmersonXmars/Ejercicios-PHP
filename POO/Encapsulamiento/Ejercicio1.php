@@ -44,7 +44,7 @@ class CuentaBancaria
 
     public function depositar($monto)
     {
-        if($monto>=0)
+        if($monto>0)
             {
                 $this->saldo += $monto;
 
@@ -56,7 +56,7 @@ class CuentaBancaria
     }
     public function retirar($monto)
     {
-        if($monto <=$this->saldo)
+        if($monto <=$this->saldo && $monto >0)
             {
                 $this->saldo -= $monto;
             }
