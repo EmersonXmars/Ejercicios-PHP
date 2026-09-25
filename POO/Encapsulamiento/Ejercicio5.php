@@ -32,19 +32,29 @@ class Empresa
     }
     public function calcularPagoEmpleado($nombre)
     {
+        $existe=false;
         if(!empty(str_replace(" ","",$nombre)))
             {
                 foreach($this->empleados as $indice=>$valor)
                     {
                         if(strtolower($indice) == str_replace(" ","",strtolower($nombre)))
                             {
+                                $existe=true;
                                 $pago= $valor["sueldo"] +($valor["horasExtra"] * 20);
                                 break;
                             }
                     }   
             }
-        echo "Le corresponde un pago de $pago\n";
-        return $pago;
+        if($existe==true)
+        {
+            echo "Le corresponde un pago de $pago\n";
+            return $pago;
+        }
+        else
+            {
+                echo "No encontrado\n";
+            }
+
 
         
     }
@@ -71,7 +81,7 @@ class Empresa
                 {
                     $bajo++;
                 }
-            elseif($pagoEmpleado>=200 && $pagoEmpleado <=3000)
+            elseif($pagoEmpleado>=2000 && $pagoEmpleado <=3000)
                 {
                     $medio++;
                 }
@@ -94,7 +104,7 @@ $empresa1= new Empresa("Fanta",
 ]);   
 
 $empresa1->mostrarEmpleados();
-$empresa1->calcularPagoEmpleado("Ana");
+$empresa1->calcularPagoEmpleado("Rana");
 $empresa1->calcularPlanillaTotal();
 $empresa1->contarEmpleadosPorNivel();
 

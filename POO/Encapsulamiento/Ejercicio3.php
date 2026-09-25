@@ -69,6 +69,7 @@ class Almacen
                 }
         }
         echo "Existen $contador con 0 de stock\n";
+        return $contador;
     }
     public function buscarProductos($nombreDelProducto)
     {   

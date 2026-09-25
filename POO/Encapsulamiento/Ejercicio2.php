@@ -70,39 +70,47 @@ class Alumno
         $total=$total+$value;
         }
         $resultado = $total /count($this->notas);
-        echo "Su promedio es: $resultado\n";
+        //echo "Su promedio es: $resultado\n";
+        return $resultado;
     }
 
     public function contarNotasAprobadas()
     {
-        $desaprobados=0;
         $aprobados=0;
-        $excelente=0;
         foreach($this->notas as $valor)
             {   
-                if($valor >=0 && $valor <=10)
-                    {
-                        $desaprobados++;
-                    }
-                elseif($valor >=11 && $valor <=17)
+                if($valor>=11)
                     {
                         $aprobados++;
                     }
-                elseif($valor>=18 && $valor<=20)
-                    {
-                        $excelente++;
-                    }
+
                 
             }
-        echo "Desaprobados:$desaprobados\n";
-        echo "Aprobados:$aprobados\n";
-        echo "Excelentes:$excelente\n";
-        echo "Notas aprobadadas:".$aprobados + $excelente;
+        echo "Notas aprobadas :$aprobados\n";
+
+    }
+    public function clasificarPromedio()
+    {
+        $promedio=$this->calcularPromedio();
+        echo "Su promedio es: $promedio - ";
+            if($promedio >=0 && $promedio <=10)
+                {
+                    echo "Desaprobado\n";
+                }
+            elseif($promedio>=11 && $promedio <=17)
+                {
+                    echo "Aprobado\n";
+                }
+            elseif($promedio>=18 && $promedio <=20)
+                {
+                    echo "Excelente\n";
+                }
     }
 }
 
 $juan = new Alumno("Juan",[14, 9, 18, 12, 20]);
 $juan->mostrarNotas();
 $juan->calcularPromedio();
+$juan->clasificarPromedio();
 $juan->contarNotasAprobadas();
 ?>

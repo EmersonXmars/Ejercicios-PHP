@@ -26,6 +26,16 @@ class restaurante
         return $this->nombre;
     }
 
+    public function mostrarPedidos()
+    {
+        foreach ($this->pedidos as $indice=> $valor) 
+        {   
+            echo "\n$indice \n";
+            foreach ($valor as  $value) {
+                echo "$value, ";
+            }
+        }
+    }
     public function calcularTotalMesa($mesa)
     {   
         $total=0;
@@ -93,7 +103,7 @@ class restaurante
                     $contador++;
                 }
             }
-        echo "Cantidad de mesas que superan el monto:$contador";
+        echo "Cantidad de mesas que superan el monto:$contador\n";
     }
 }
 
@@ -106,4 +116,5 @@ $restaurante1= new restaurante("ElPiolin",
 $restaurante1->calcularTotalMesa("Mesa 5");
 $restaurante1->calcularVentaTotal();
 $restaurante1->contarMesasMayoresA(50);
+$restaurante1->mostrarPedidos();
 ?>
