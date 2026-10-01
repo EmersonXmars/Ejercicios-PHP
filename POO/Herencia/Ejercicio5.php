@@ -5,7 +5,7 @@ class Cuenta
     protected $saldo;
 
     public function __construct($titular,$saldo=0) {
-        $this->titular=$titular;
+        $this->setTitular($titular);
         $this->saldo=$saldo;
     }
 
@@ -25,6 +25,11 @@ class Cuenta
     {
         //aqui tengo una duda, estoy obligado a colocar getTitular siempre que use setTitular?
         return $this->titular;
+    }
+
+    public function getSaldo()
+    {
+        return $this->saldo;
     }
 
     public function depositar($monto)

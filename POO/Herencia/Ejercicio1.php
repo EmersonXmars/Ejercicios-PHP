@@ -22,7 +22,7 @@ class Persona
     }
     public function setEdad($edad)
     {
-        if(!empty($edad))
+        if(is_numeric($edad) && $edad>=0)
             {
                 if($edad>=0 && $edad<=120)
                     {
@@ -45,7 +45,7 @@ class Persona
     }
     public function getEdad()
     {
-        return $this->nombre;
+        return $this->edad;
     }
     public function MostrarDatos()
     {

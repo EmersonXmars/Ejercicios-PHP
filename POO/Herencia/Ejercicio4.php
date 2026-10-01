@@ -8,7 +8,7 @@ class Vehiculo
     public function __construct($marca,$modelo,$combustible) {
         $this->marca=$marca;
         $this->modelo=$modelo;
-        $this->combustible;
+        $this->combustible=$combustible;
     }
 
     public function mostrarDatos()
@@ -35,6 +35,7 @@ class Camion extends Vehiculo
         {
             $total=$total + $value;
         }
+        
         return $total;
     }
 
@@ -73,6 +74,10 @@ class Camion extends Vehiculo
 }
 
 $camionJonda= new Camion("Honda","V3",100,[1200, 800, 1500, 900]);
+
+$camionJonda->calcularCargaTotal();
+$camionJonda->contarCargasPesadas();
+$camionJonda->clasificarCarga();
 
 
 

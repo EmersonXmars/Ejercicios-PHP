@@ -55,8 +55,8 @@ class Vendedor extends Empleado
         foreach ($this->ventas as $value) 
         {
             $total=$total + $value;
-            return $total;
         }
+        return $total;
     }
 
     public function calcularComision()

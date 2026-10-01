@@ -42,7 +42,7 @@ class Producto
 
     public function getPrecio()
     {
-        return $this->nombre;
+        return $this->precio;
     }
 
     public function mostrarProducto()
@@ -76,7 +76,7 @@ class Producto
                     echo "Por vencer\n";
                     return $estado;
                 }
-            elseif($this->diasParaVencer >=3)
+            elseif($this->diasParaVencer > 3)
                 {
                     $estado="Vigente";
                     echo "Vigente\n";
@@ -86,14 +86,18 @@ class Producto
 
         public function calcularDescuento()
         {
+            $descuento=0;
+            $total=0;
             if($this->diasParaVencer ==0)
                 {
                     echo "No se vende";
                 }
             elseif($this->diasParaVencer >=1 && $this->diasParaVencer <=3)
                 {
-                    echo "Precio de descuento 20%: ";
-                    echo $this->precio *=0.20;
+                    $descuento=$this->precio * 0.20;
+                    $total=$this->precio - $descuento;
+                    echo "Precio de descuento 20%: $total ";
+                    
                 }
             elseif($this->diasParaVencer >=3)
                 {
