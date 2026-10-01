@@ -1,4 +1,5 @@
 <?php
+/*
 class Estudiante
 {
     public $nombre;
@@ -51,4 +52,5 @@ $luis= new Estudiante("Luis",[14,18,11,16]);
 $luis->mostrarNotas();
 $luis->calcularPromedio();
 $luis->clasificarPromedio();
+*/
 ?>

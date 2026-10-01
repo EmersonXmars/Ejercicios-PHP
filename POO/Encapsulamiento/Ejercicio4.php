@@ -52,7 +52,7 @@ class restaurante
                         }
                         echo "La venta la mesa $indice es: $total \n";
                     return $total;
-                    break;
+                    
                 }
 
         }
@@ -67,7 +67,6 @@ class restaurante
     public function calcularVentaTotal()
     {
         $total=0;
-        $resultado=0;
         foreach ($this->pedidos as  $valor) 
         {
            foreach($valor as $value)
